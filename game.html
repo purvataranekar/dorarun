@@ -1,0 +1,44 @@
+<html>
+	<body background = "download.jpg" onload = "inputKeyUp(event)">
+		<canvas id = "canvas"></canvas>
+	<script>
+		
+		var canvas = null;
+		var ctx = null;
+		canvas = document.getElementById("canvas");
+		ctx = canvas.getContext("2d");
+		canvas.width = window.innerWidth;//,width = "1000",height = "1000"
+		canvas.height = window.innerHeight;
+		ctx.fillStyle = "#0000FF";
+		ctx.font = "60px Comic Sans";
+		var img = new Image();
+		img.addEventListener("load", function() {
+			ctx.drawImage(img,500,250);
+		})
+		img.src = 'new_dora.png';
+		ctx.fillText("D    RARUN",450,300);
+		ctx.font = "30px Comic Sans";
+		ctx.fillText("Press enter to continue...",450,400);
+		
+		/*switch(e){
+    		/*e.which = e.which || e.keyCode;
+    		if(e.which == 13) {
+    			window.location.href("indexg.html");
+        		e.src = "indexg.html";
+        	}
+        	case 13 : window.location.html("indexg.html");
+        			break;
+        	default : break;
+        	}*/
+   	        window.onkeypress = check_return;
+        
+        	function check_return(event) {
+            		var key = event.keyCode || event.which;
+            		if(key === 13) {    //acsii of 'enter'
+                	//alert('you pressed enter!');
+                	window.location.assign("indexg.html");
+            }
+        }
+	</script>
+	</body>
+</html> 
