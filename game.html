@@ -1,5 +1,5 @@
 <html>
-	<body background = "download.jpg" onload = "inputKeyUp(event)">
+	<body background = "images/download.jpg" onload = "inputKeyUp(event)">
 		<canvas id = "canvas"></canvas>
 	<script>
 		
@@ -15,7 +15,7 @@
 		img.addEventListener("load", function() {
 			ctx.drawImage(img,500,250);
 		})
-		img.src = 'new_dora.png';
+		img.src = 'images/new_dora.png';
 		ctx.fillText("D    RARUN",450,300);
 		ctx.font = "30px Comic Sans";
 		ctx.fillText("Press enter to continue...",450,400);
