@@ -1,0 +1,20 @@
+#timer
+{
+    font-size: 5em;
+    color: aquamarine;
+    display: block;
+    position: absolute;
+    right: 6%;
+    width: 30%;
+    height: 620px;
+    top: 9px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+#canvas
+{
+    border : 1px solid grey;
+    border-radius : 3px;
+    display: block;
+
+}
