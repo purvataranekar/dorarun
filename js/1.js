@@ -86,5 +86,5 @@ function velocity() {
 function pause()
 {
     var value = text.text;
-    text.clearInterval();
+    clearInterval(main_interval);
 }
