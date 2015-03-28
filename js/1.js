@@ -24,10 +24,10 @@ function Tick() {
 setInterval(1000);*/
 
 function check_return(event) {
+    var oldx,oldy;
     console.log('checking return');
 	var key = event.keyCode || event.which;
 	if(key === 37) {             //left key
-        //redraw(-10,0);
         current_vel.x = -1;
         current_vel.y = 0;
     }
@@ -42,7 +42,7 @@ function check_return(event) {
         //redraw(0,10);
         current_vel.x = 0;
         current_vel.y = 1;
-        console.log('down key pressed')
+        //console.log('down key pressed')
     }
 
     else if(key === 39) {       //right key
@@ -50,6 +50,17 @@ function check_return(event) {
         current_vel.x = 1;
         current_vel.y = 0;
 	}
+    else if(key === 80 || key === 112) {    //pause
+        oldx = current_vel.x;
+        oldy = current_vel.y;
+        current_vel.x = 0;
+        current_vel.y = 0;
+    }
+    else if(key === 82 || key === 114) {    //resume
+        current_vel.x = oldx;
+        current_vel.y = oldy;  
+    }
+        
 }
 
 function redraw(x, y) {
@@ -87,4 +98,5 @@ function pause()
 {
     var value = text.text;
     clearInterval(main_interval);
+    check_return(event);
 }
