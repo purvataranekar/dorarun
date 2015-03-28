@@ -51,7 +51,7 @@ function check_return(event) {
         current_vel.y = 0;
 	}
 }
-;
+
 function redraw(x, y) {
     erase();
     current_pos.x = x;
@@ -85,6 +85,6 @@ function velocity() {
 
 function pause()
 {
-    var value = text.text;
+    var value = js/timer.js.text.text;
     clearInterval();
 }
