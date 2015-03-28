@@ -39,7 +39,6 @@ function check_return(event) {
     else if(key === 40) {       //down key
         current_vel.x = 0;
         current_vel.y = 1;
-        //console.log('down key pressed')
     }
 
     else if(key === 39) {       //right key
@@ -47,21 +46,18 @@ function check_return(event) {
         current_vel.y = 0;
 	}
     else if(key === 80 || key === 112) {    //pause
-        oldx = current_vel.x;
-        oldy = current_vel.y;
-        show_time(time);
-        clearInterval(main_interval);
-        clearInterval(velocity_interval);
-        current_vel.x = 0;
-        current_vel.y = 0;
+        if(current_state === "resumed") {
+            clearInterval(main_interval);
+            clearInterval(velocity_interval);
+            current_state = "paused";
+        }
     }
     else if(key === 82 || key === 114) {    //resume
-        current_vel.x = oldx;
-        current_vel.y = oldy;  
-        setInterval(velocity,20);
-        setInterval(decrease_time,1000);    
-        show_time(time);
-        time--;
+        if(current_state === "paused") {
+            velocity_interval = setInterval(velocity,20);
+            main_interval = setInterval(decrease_time,1000);
+            current_state = "resumed";
+        }
     }
         
 }
