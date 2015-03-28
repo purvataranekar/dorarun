@@ -4,7 +4,6 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = "60px Comic Sans";
 ctx.fillText("TIME", 900, 50);
-var p = document.getElementById("pause");
 
 var img = new Image();
 
@@ -53,6 +52,10 @@ function check_return(event) {
     else if(key === 80 || key === 112) {    //pause
         oldx = current_vel.x;
         oldy = current_vel.y;
+        var value = text.text;
+        show_time(time);
+        clearInterval(main_interval);
+        clearInterval(velocity_interval);
         current_vel.x = 0;
         current_vel.y = 0;
     }
@@ -92,11 +95,4 @@ function velocity() {
     var current_x = current_pos.x;
     var current_y = current_pos.y;
     redraw(current_x + current_vel.x * 2, current_y + current_vel.y * 2);
-}
-
-function pause()
-{
-    var value = text.text;
-    clearInterval(main_interval);
-    check_return(event);
 }
