@@ -59,6 +59,7 @@ function check_return(event) {
         current_vel.y = 0;
     }
     else if(key === 82 || key === 114) {
+        setInterval(velocity,20);
         setInterval(decrease_time,1000);    //resume
         show_time(time);
         time--;
