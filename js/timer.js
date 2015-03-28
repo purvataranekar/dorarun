@@ -1,6 +1,6 @@
 velocity_interval = setInterval(velocity,20);
 var time = 10;
-
+text();
 var main_interval = setInterval(decrease_time,1000);
 
 function decrease_time() {
@@ -14,8 +14,12 @@ function decrease_time() {
         clearInterval(velocity_interval);
     }
 }
-
+function text()
+{
+    var text = document.getElementById("text");
+    //text.appendChild = "TIMER";
+}
 function show_time(t) {
-    timer = document.getElementById('timer');
+    timer = document.getElementById('data');
     timer.innerHTML = t;
 }

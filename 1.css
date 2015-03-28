@@ -18,3 +18,27 @@
     display: block;
 
 }
+#text
+{
+    width : 100%;
+    height : 60px;
+    top: 9px;
+    text-align: center;
+    font-size: 50;
+}
+#data
+{
+    width : 100%;
+    height: 60px;
+    top: 85px;
+    text-align: center;
+    font-size: 50;
+}
+#pause
+{
+    width : 100%;
+    height: 60px;
+    top: 150px;
+    text-align: center;
+    font-size: 40;  
+}
