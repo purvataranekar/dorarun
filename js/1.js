@@ -52,14 +52,16 @@ function check_return(event) {
     else if(key === 80 || key === 112) {    //pause
         oldx = current_vel.x;
         oldy = current_vel.y;
-        var value = text.text;
         show_time(time);
         clearInterval(main_interval);
         clearInterval(velocity_interval);
         current_vel.x = 0;
         current_vel.y = 0;
     }
-    else if(key === 82 || key === 114) {    //resume
+    else if(key === 82 || key === 114) {
+        setInterval(decrease_time,1000);    //resume
+        show_time(time);
+        time--;
         current_vel.x = oldx;
         current_vel.y = oldy;  
     }
