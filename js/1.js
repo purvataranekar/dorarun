@@ -85,6 +85,6 @@ function velocity() {
 
 function pause()
 {
-    var value = js/timer.js.text.text;
-    clearInterval();
+    var value = text.text;
+    text.clearInterval();
 }
