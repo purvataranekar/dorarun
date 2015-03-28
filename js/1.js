@@ -32,20 +32,17 @@ function check_return(event) {
     }
 
     else if(key === 38) {       //top key
-        //redraw(0,-10);
         current_vel.x = 0;
         current_vel.y = -1;
     }
 
     else if(key === 40) {       //down key
-        //redraw(0,10);
         current_vel.x = 0;
         current_vel.y = 1;
         //console.log('down key pressed')
     }
 
     else if(key === 39) {       //right key
-        //redraw(10,0);
         current_vel.x = 1;
         current_vel.y = 0;
 	}
@@ -58,13 +55,13 @@ function check_return(event) {
         current_vel.x = 0;
         current_vel.y = 0;
     }
-    else if(key === 82 || key === 114) {
-        setInterval(velocity,20);
-        setInterval(decrease_time,1000);    //resume
-        show_time(time);
-        time--;
+    else if(key === 82 || key === 114) {    //resume
         current_vel.x = oldx;
         current_vel.y = oldy;  
+        setInterval(velocity,20);
+        setInterval(decrease_time,1000);    
+        show_time(time);
+        time--;
     }
         
 }
