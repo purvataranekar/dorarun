@@ -4,7 +4,6 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = "60px Comic Sans";
 ctx.fillText("TIME", 900, 50);
-var p = document.getElementById("pause");
 
 var img = new Image();
 
@@ -24,34 +23,49 @@ function Tick() {
 setInterval(1000);*/
 
 function check_return(event) {
+    var oldx,oldy;
     console.log('checking return');
 	var key = event.keyCode || event.which;
 	if(key === 37) {             //left key
-        //redraw(-10,0);
         current_vel.x = -1;
         current_vel.y = 0;
     }
 
     else if(key === 38) {       //top key
-        //redraw(0,-10);
         current_vel.x = 0;
         current_vel.y = -1;
     }
 
     else if(key === 40) {       //down key
-        //redraw(0,10);
         current_vel.x = 0;
         current_vel.y = 1;
-        console.log('down key pressed')
+        //console.log('down key pressed')
     }
 
     else if(key === 39) {       //right key
-        //redraw(10,0);
         current_vel.x = 1;
         current_vel.y = 0;
 	}
+    else if(key === 80 || key === 112) {    //pause
+        oldx = current_vel.x;
+        oldy = current_vel.y;
+        show_time(time);
+        clearInterval(main_interval);
+        clearInterval(velocity_interval);
+        current_vel.x = 0;
+        current_vel.y = 0;
+    }
+    else if(key === 82 || key === 114) {    //resume
+        current_vel.x = oldx;
+        current_vel.y = oldy;  
+        setInterval(velocity,20);
+        setInterval(decrease_time,1000);    
+        show_time(time);
+        time--;
+    }
+        
 }
-;
+
 function redraw(x, y) {
     erase();
     current_pos.x = x;
@@ -81,10 +95,4 @@ function velocity() {
     var current_x = current_pos.x;
     var current_y = current_pos.y;
     redraw(current_x + current_vel.x * 2, current_y + current_vel.y * 2);
-}
-
-function pause()
-{
-    var value = text.text;
-    clearInterval();
 }
