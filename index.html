@@ -1,20 +1,44 @@
 <html>
-	<body bgcolor = "EA7474">
-		<canvas id = "index"></canvas>
-		<script>
-			var canvas = document.getElementById("index");
-			var ctx = canvas.getContext("2d");
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
-			ctx.fillStyle = "#0000FF";
-			ctx.font = "60px Comic Sans";
-			ctx.fillText("DORARUN",450,80);
-			ctx.font = "30px Comic Sans";
-			ctx.fillText("START",530,200);
-			ctx.fillText("RULES",530,250);
-			ctx.fillText("HELP",530,300);
-			ctx.fillText("HIGH SCORES",530,350);
-			
-		</script>
+	<body background = "images/blue-background-hd.jpg" onload = "inputKeyUp(event)">
+		<canvas id = "canvas"></canvas>
+	<script>
+		
+		var canvas = null;
+		var ctx = null;
+		canvas = document.getElementById("canvas");
+		ctx = canvas.getContext("2d");
+		canvas.width = window.innerWidth;//,width = "1000",height = "1000"
+		canvas.height = window.innerHeight;
+		ctx.fillStyle = "#0000FF";
+		ctx.font = "90px Comic Sans";
+		var img = new Image();
+		img.addEventListener("load", function() {
+			ctx.drawImage(img,500,250);
+		})
+		img.src = 'images/new_dora.png';
+		ctx.fillText(" D   RARUN",420,330);
+		ctx.font = "30px Comic Sans";
+		ctx.fillText("Press enter to continue...",480,400);
+		
+		/*switch(e){
+    		/*e.which = e.which || e.keyCode;
+    		if(e.which == 13) {
+    			window.location.href("indexg.html");
+        		e.src = "indexg.html";
+        	}
+        	case 13 : window.location.html("indexg.html");
+        			break;
+        	default : break;
+        	}*/
+   	        window.onkeypress = check_return;
+        
+        	function check_return(event) {
+            		var key = event.keyCode || event.which;
+            		if(key === 13) {    //acsii of 'enter'
+                	//alert('you pressed enter!');
+                	window.location.assign("game.html");
+            }
+        }
+	</script>
 	</body>
-</html>
+</html> 

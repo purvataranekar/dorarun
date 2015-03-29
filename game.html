@@ -1,44 +1,24 @@
 <html>
-	<body background = "images/download.jpg" onload = "inputKeyUp(event)">
-		<canvas id = "canvas"></canvas>
-	<script>
-		
-		var canvas = null;
-		var ctx = null;
-		canvas = document.getElementById("canvas");
-		ctx = canvas.getContext("2d");
-		canvas.width = window.innerWidth;//,width = "1000",height = "1000"
-		canvas.height = window.innerHeight;
-		ctx.fillStyle = "#0000FF";
-		ctx.font = "90px Comic Sans";
-		var img = new Image();
-		img.addEventListener("load", function() {
-			ctx.drawImage(img,500,250);
-		})
-		img.src = 'images/new_dora.png';
-		ctx.fillText(" D   RARUN",420,330);
-		ctx.font = "30px Comic Sans";
-		ctx.fillText("Press enter to continue...",480,400);
-		
-		/*switch(e){
-    		/*e.which = e.which || e.keyCode;
-    		if(e.which == 13) {
-    			window.location.href("indexg.html");
-        		e.src = "indexg.html";
-        	}
-        	case 13 : window.location.html("indexg.html");
-        			break;
-        	default : break;
-        	}*/
-   	        window.onkeypress = check_return;
-        
-        	function check_return(event) {
-            		var key = event.keyCode || event.which;
-            		if(key === 13) {    //acsii of 'enter'
-                	//alert('you pressed enter!');
-                	window.location.assign("index.html");
-            }
-        }
-	</script>
+	<body bgcolor = "#58D3F7">
+		<canvas id = "index"></canvas>
+        <div id = "game_start", align = "center">START</div>
+        <div id = "game_rules", align = "center">RULES</div>
+        <div id = "game_help" , align = "center">HELP</div>
+        <div id = "game_high" , align = "center">HIGH SCORES</div>
+        <link rel="stylesheet" href="game.css">
+		<script>
+			var canvas = document.getElementById("index");
+			var ctx = canvas.getContext("2d");
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			ctx.font = "60px Comic Sans";
+			ctx.fillText("DORARUN",450,80);
+			/*ctx.font = "30px Comic Sans";
+			ctx.fillText("START",530,200);
+			ctx.fillText("RULES",530,250);
+			ctx.fillText("HELP",530,300);
+			ctx.fillText("HIGH SCORES",530,350);*/
+			
+		</script>
 	</body>
-</html> 
+</html>
