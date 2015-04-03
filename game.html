@@ -1,7 +1,7 @@
 <html>
 	<body bgcolor = "#58D3F7">
 		<canvas id = "index"></canvas>
-        <div id = "game_start", align = "center">START</div>
+        <div id = "game_start", align = "center", onmouseover = "js.game.js" ,onmousedown = "start()">START</div>
         <div id = "game_rules", align = "center">RULES</div>
         <div id = "game_help" , align = "center">HELP</div>
         <div id = "game_high" , align = "center">HIGH SCORES</div>
@@ -13,12 +13,18 @@
 			canvas.height = window.innerHeight;
 			ctx.font = "60px Comic Sans";
 			ctx.fillText("DORARUN",450,80);
-			/*ctx.font = "30px Comic Sans";
-			ctx.fillText("START",530,200);
-			ctx.fillText("RULES",530,250);
-			ctx.fillText("HELP",530,300);
-			ctx.fillText("HIGH SCORES",530,350);*/
-			
+            
+            function mouse()
+            {
+                var used = document.getElementById("game_start");
+                used.text.fontSize = 54;
+                used.text.color = "#009933";
+            }
+            function start()
+            {
+                var used = document.getElementById("game_start");
+                
+            }
 		</script>
 	</body>
 </html>
