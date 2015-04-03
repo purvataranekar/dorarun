@@ -1,10 +1,10 @@
 <html>
 	<body bgcolor = "#58D3F7">
 		<canvas id = "index"></canvas>
-        <div id = "game_start", align = "center", onmouseover = "mouse()" ,onmousedown = "start()">START</div>
-        <div id = "game_rules", align = "center">RULES</div>
-        <div id = "game_help" , align = "center">HELP</div>
-        <div id = "game_high" , align = "center">HIGH SCORES</div>
+        <div id = "game_start", align = "center", onmouseover = "over(this)" , onmouseout="out(this)" onmousedown = "start()">START</div>
+        <div id = "game_rules", align = "center" ,onmouseover = "mouse(this)" , onmouseout="out(this)" onmousedown = "start()" >RULES</div>
+        <div id = "game_help" , align = "center" ,onmouseover = "mouse(this)" , onmouseout="out(this)" onmousedown = "start()">HELP</div>
+        <div id = "game_high" , align = "center",onmouseover = "mouse(this)" , onmouseout="out(this)" onmousedown = "start()">HIGH SCORES</div>
         <link rel="stylesheet" href="game.css">
 		<script>
 			var canvas = document.getElementById("index");
@@ -14,11 +14,17 @@
 			ctx.font = "60px Comic Sans";
 			ctx.fillText("DORARUN",450,80);
             
-            function mouse()
+            function over(event)
             {
-                var used = document.getElementById("game_start");
-                used.text.fontSize = 54;
-                used.text.color = "#009933";
+                var used = event.id;
+                used.style.fontSize = 54;
+                used.style.color = "#009933";
+            }
+            function out(event)
+            {
+                var used = event.id;
+                used.style.fontSize = 50;
+                used.style.color = "#000000";
             }
             function start()
             {
