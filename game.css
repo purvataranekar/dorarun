@@ -1,8 +1,8 @@
 #game_start
 {
-    position: inherit;
-    top : 0px;
-    left: inherit;
+    position: absolute;
+    top : 20%;
+    left: 0%;
     width : 400px;
     height : 50px;
     text-align: center;
@@ -14,9 +14,9 @@
 }
 #game_rules
 {
-    position: inherit;
-    top: 10px;
-    left: 50px;
+    position: absolute;
+    top : 43%;
+    left: 0%;
     width : 400px;
     height : 50px;
     text-align: center;
@@ -27,9 +27,9 @@
 }
 #game_help
 {
-    position: inherit;
-    top: 20px;
-    left: 30px;
+    position: absolute;
+    top : 58%;
+    left: 0%;
     width : 400px;
     height : 50px;
     text-align: center;
@@ -40,9 +40,9 @@
 }
 #game_high
 {
-    position: inherit;
-    top: auto;
-    left: inherit;
+    position: absolute;
+    top : 75%;
+    left: 0%;
     width : 400px;
     height : 50px;
     text-align: center;
