@@ -42,3 +42,9 @@
     font-size: 50;
     margin-left: 400px;
 }
+
+.change_cursor {
+    cursor : pointer;
+    position : relative;
+    margin : 0;
+}

@@ -1,10 +1,18 @@
 <html>
 	<body bgcolor = "#58D3F7">
 		<canvas id = "index"></canvas>
-        <div id = "game_start", align = "center", onmouseover = "over(this)" , onmouseout="out(this)" onmousedown = "start()">START</div>
-        <div id = "game_rules", align = "center" ,onmouseover = "mouse(this)" , onmouseout="out(this)" onmousedown = "start()" >RULES</div>
-        <div id = "game_help" , align = "center" ,onmouseover = "mouse(this)" , onmouseout="out(this)" onmousedown = "start()">HELP</div>
-        <div id = "game_high" , align = "center",onmouseover = "mouse(this)" , onmouseout="out(this)" onmousedown = "start()">HIGH SCORES</div>
+        <div id = "game_start" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onmousedown = "start()">
+		<p class="change_cursor">START</p>
+	</div>
+        <div id = "game_rules" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onmousedown = "start()">
+		<p class="change_cursor">RULES</p>
+	</div>
+        <div id = "game_help" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onmousedown = "start()">
+		<p class="change_cursor">HELP</p>
+	</div>
+        <div id = "game_high" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onmousedown = "start()">
+		<p class="change_cursor">HIGH SCORES</px>
+	</div>
         <link rel="stylesheet" href="game.css">
 		<script>
 			var canvas = document.getElementById("index");
@@ -16,15 +24,15 @@
             
             function over(event)
             {
-                var used = event.id;
-                used.style.fontSize = 54;
-                used.style.color = "#009933";
+                var element = document.getElementById(event.id);
+                element.style.fontSize = 54;
+                element.style.color = "#009933";
             }
             function out(event)
             {
-                var used = event.id;
-                used.style.fontSize = 50;
-                used.style.color = "#000000";
+                var element = document.getElementById(event.id);
+                element.style.fontSize = 50;
+                element.style.color = "#000000";
             }
             function start()
             {
