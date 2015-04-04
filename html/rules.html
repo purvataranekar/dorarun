@@ -1,0 +1,17 @@
+<html>
+    <body background = "../images/blue-background-hd.jpg" onload = "inputKeyUp(event)">
+		<canvas id = "canvas"></canvas>
+        <script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		canvas.width = window.innerWidth;//,width = "1000",height = "1000"
+		canvas.height = window.innerHeight;
+		ctx.fillStyle = "#0000FF";
+        ctx.font = "60px Comic Sans";
+        ctx.fillText("DORA-RULES",460,80);
+        ctx.fillStyle = "#000000";
+        ctx.font = "20px Comic Sans";
+        ctx.fillText("The DOREMON is moved using navigation keys.",150,170);
+        ctx.fillText("The Game is paused by pressing 'P' and resumed by pressing 'R'.",150,220);
+        </script>
+</html>

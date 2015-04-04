@@ -11,7 +11,7 @@ img.addEventListener("load", function () {
 	ctx.drawImage(img, 0, 0);
 })
 
-img.src = 'images/new_dora.png';
+img.src = '../images/new_dora.png';
 
 window.onkeydown = check_return; 
 

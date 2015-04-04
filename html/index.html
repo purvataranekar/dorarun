@@ -1,19 +1,20 @@
 <html>
-	<body background = "images/blue-background-hd.jpg" onload = "inputKeyUp(event)">
+    <title>Dorarun</title>
+	<body background = "../images/blue-background-hd.jpg" onload = "inputKeyUp(event)">
 		<canvas id = "canvas"></canvas>
 	<script>
 		var canvas = document.getElementById("canvas");
 		var ctx = canvas.getContext("2d");
-		canvas.width = window.innerWidth;//,width = "1000",height = "1000"
+		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
 		ctx.fillStyle = "#0000FF";
 		ctx.font = "90px Comic Sans";
 		var img = new Image();
 		img.addEventListener("load", function() {
-			ctx.drawImage(img,500,250);
+			ctx.drawImage(img,500,230);
 		})
-		img.src = 'images/new_dora.png';
-		ctx.fillText(" D   RARUN",420,330);
+		img.src = '../images/new_dora.png';
+		ctx.fillText(" D   RARUN",420,300);
 		ctx.font = "30px Comic Sans";
 		ctx.fillText("Press enter to continue...",480,400);
 		

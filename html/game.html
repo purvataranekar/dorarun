@@ -1,0 +1,51 @@
+<html>
+	<body bgcolor = "#58D3F7">
+		<canvas id = "index"></canvas>
+        <div id = "game_start" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onclick = "start(this)">START</div>
+        <div id = "game_rules" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onclick = "start(this)" >RULES</div>
+        <div id = "game_help" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onclick = "start(this)">HELP</div>
+        <div id = "game_high" align = "center" onmouseover = "over(this)" onmouseout="out(this)" onclick = "start(this)">HIGH SCORES</div>
+        <link rel="stylesheet" href="../css/game.css">
+		<script>
+			var canvas = document.getElementById("index");
+			var ctx = canvas.getContext("2d");
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			ctx.font = "60px Comic Sans";
+			ctx.fillText("DORARUN",450,80);
+            
+            function over(event)
+            {
+                var used = document.getElementById(event.id);
+                used.style.fontSize = 54;
+                used.style.color = "#009933";
+            }
+            function out(event)
+            {
+                var used = document.getElementById(event.id);
+                used.style.fontSize = 50;
+                used.style.color = "#000000";
+            }
+            function start(event)
+            {
+                var used = document.getElementById(event.id);
+                if(event.id === "game_start")
+                {
+                    window.open("1.html");
+                }
+                if(event.id === "game_rules")
+                {
+                    window.open("rules.html");
+                }
+                if(event.id === "game_help")
+                {
+                    window.open();
+                }
+                if(event.id === "game_high")
+                {
+                    window.open();
+                }
+            }
+		</script>
+	</body>
+</html>
