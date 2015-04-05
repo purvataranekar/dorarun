@@ -1,24 +1,26 @@
 var current_pos = {x : 0, y : 0};
 var current_vel = {x : 1, y : 0};
 
+var x = Math.floor(Math.random() * (800 - 0 + 1) + 0);
+var y = Math.floor(Math.random() * (620 - 0 + 1) + 0);
+document.getElementById("random1").innerHTML= x;
+document.getElementById("random2").innerHTML= y;
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.fillStyle = "60px Comic Sans";
 ctx.fillText("TIME", 900, 50);
-var x = Math.floor(Math.random() * (10 - 0 + 1) + 0)
-var y = Math.floor(Math.random() * (20 - 10 + 1) + 10);
-                   document.getElementById("random1").innerHTML= x;
-document.getElementById("random2").innerHTML= y;
-var img = new Image();
 
+var img = new Image();
+var cake = new Image();
 img.addEventListener("load", function () {
 	ctx.drawImage(img, 0, 0);
+    ctx.drawImage(cake, x, y);
 })
 
 img.src = '../images/new_dora.png';
-
+cake.src = '../images/brown_cake.jpg';
 window.onkeydown = check_return; 
 
 /*window.setTimeout("Tick()", 1000);
