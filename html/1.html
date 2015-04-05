@@ -1,11 +1,13 @@
 <html>
-	<body>
+	<body onkeydown="return (event.keyCode != 116)">
 	<canvas id = "canvas" height="620" width="800"></canvas>
     <div id="timer">
         <div id="text">TIMER</div>
         <div id = "data"></div>
         <div id = "pause" onclick = pause()>PAUSE</div>
         <div id = "resume" onclick = "resume">RESUME</div>
+        <div id = "random1"></div>
+        <div id = "random2"></div>
     </div>
     <link rel="stylesheet" href="../css/1.css">
 	<script type="text/javascript" src="../js/1.js"></script>

@@ -1,12 +1,15 @@
 <html>
     <title>Dorarun</title>
 	<body background = "../images/blue-background-hd.jpg" onload = "inputKeyUp(event)">
+        //<div id = "div" align = "center"></div>
 		<canvas id = "canvas"></canvas>
 	<script>
 		var canvas = document.getElementById("canvas");
 		var ctx = canvas.getContext("2d");
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
+        /*var x = Math.floor(Math.random() * 10);
+        document.getElementById("div").innerHTML= x;*/
 		ctx.fillStyle = "#0000FF";
 		ctx.font = "90px Comic Sans";
 		var img = new Image();
@@ -17,17 +20,6 @@
 		ctx.fillText(" D   RARUN",420,300);
 		ctx.font = "30px Comic Sans";
 		ctx.fillText("Press enter to continue...",480,400);
-		
-		/*switch(e){
-    		/*e.which = e.which || e.keyCode;
-    		if(e.which == 13) {
-    			window.location.href("indexg.html");
-        		e.src = "indexg.html";
-        	}
-        	case 13 : window.location.html("indexg.html");
-        			break;
-        	default : break;
-        	}*/
    	        window.onkeypress = check_return;
         
         	function check_return(event) {
