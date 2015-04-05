@@ -1,8 +1,13 @@
 var current_pos = {x : 0, y : 0};
 var current_vel = {x : 1, y : 0};
+<<<<<<< HEAD
 
 var x = Math.floor(Math.random() * (800 - 0 + 1) + 0);
 var y = Math.floor(Math.random() * (620 - 0 + 1) + 0);
+=======
+var x = Math.floor((Math.random() * (10 - 0 + 1) + 0);
+var y = Math.floor((Math.random() * (20 - 10 + 1) + 10);
+>>>>>>> 0a2d0e4e3fd8d9a314d3921924f0fde397bf7d62
 document.getElementById("random1").innerHTML= x;
 document.getElementById("random2").innerHTML= y;
 
